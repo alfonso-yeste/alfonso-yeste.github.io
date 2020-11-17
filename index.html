@@ -1,19 +1,39 @@
 ---
 layout: main
 ---
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html |  truncatewords: 40 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minuto(s) de lectura" }}{% endunless %}</span>
-  </div>
-</article>
-{% endfor %}
+<div class="container-fluid container-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="navbar-container">
+                    <div class="container header">
+                        <span class="title">CRO&nbsp-&nbspUX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid header-posts">
+    <div class="posts">
+        <div class="title"><span>Últimos posts</span></div>
+    </div>
 
-{% include pagination.html %}
+    <div class="container">
+        <div class="row">
+            {% for post in paginator.posts %}
+
+            <div class="col-md-6 col-12">
+                <article class="post">
+                    <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+                    {% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-"
+                    %}{{ words | plus: 250 | divided_by: 250 | append: " minuto(s) de lectura" }}{% endunless %}<br/>
+                    <a href="{{post.url | prepend: site.baseurl}}">Leer más</a>
+                </article>
+            </div>
+            {% endfor %}
+
+            {% include pagination.html %}
+        </div>
+    </div>
+</div>

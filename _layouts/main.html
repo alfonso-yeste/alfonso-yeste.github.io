@@ -2,67 +2,76 @@
 layout: default
 ---
 
-<aside class="sidebar">
-  <header>
-    <div class="about">
-      <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
-      </div>
-      <div class="author-name">
-        <img alt="{{site.author}}" src="{{site.baseurl}}/assets/img/{% if site.author-logo %}{{site.author-logo}}{% endif %}" />
-      </div>
-      <p>{{site.about-author}}</p>
+<div class="container-fluid container-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="navbar-container">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="#">
+                            <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt="" loading="lazy">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">CRO - UX RESEARCH<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">ANALYTICS</a>
+                                </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">ESTADÍSTICA</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">JAVASCRIPT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">WPO</a>
+                                </li>
 
-      <div class="title">Podcasts</div>
-      <div class="author-podcast">
-        <a href="{{site.personal-podcast-url}}" target="_blank">
-          <img src="{{site.baseurl}}/assets/img/{% if site.personal-podcast-image %}{{site.personal-podcast-image}}{% endif %}"  alt="{{site.personal-podcast-title}}">
-        </a>
-      </div>
-      <div class="author-podcast">
-        <a href="{{site.todoestamal-podcast-url}}" target="_blank">
-          <img src="{{site.baseurl}}/assets/img/{% if site.todoestamal-podcast-image %}{{site.todoestamal-podcast-image}}{% endif %}"  alt="{{site.todoestamal-podcast-title}}">
-        </a>
-      </div>
-
+                                <li class="nav-item">
+                                    <div id="search-input" style="display: none">
+                                        <input class="form-control search-field" type="search" placeholder="Búsqueda"
+                                               aria-label="Search">
+                                    </div>
+                                    <a class="nav-link" href="#" id="search"><i class="fas fa-search"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </div>
-  </header> <!-- End Header -->
-  <footer>
-    <section class="contact">
-      <h3 class="contact-title">Contáctame</h3>
-      <ul>
-        {% if site.social-twitter %}
-          <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% else %}
-          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.social-facebook %}
-          <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        {% else %}
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.social-github %}
-          <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
-        {% else %}
-          <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.social-linkedin %}
-          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        {% else %}
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.social-email %}
-          <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
-        {% else %}
-          <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-        {% endif %}
-      </ul>
-    </section> <!-- End Section Contact -->
-    <div class="copyright">
-      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
-    </div>
-  </footer> <!-- End Footer -->
-</aside> <!-- End Sidebar -->
-<div class="content-box clearfix">
-  {{ content }}
 </div>
+
+{{ content }}
+
+<!-- Footer -->
+<div class="container-fluid footer">
+    <div class="row">
+        <div class="col footer-content">
+            Soy {{site.author}} <br/><br/>
+            <a href="#">Politica de privacidad</a><br/><br/>
+            Todos los derechos reservados
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<!-- JS Scripts End -->
+<script src="https://kit.fontawesome.com/a136b1a484.js" crossorigin="anonymous"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>

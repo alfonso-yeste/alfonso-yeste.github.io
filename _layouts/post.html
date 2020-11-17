@@ -1,38 +1,88 @@
 ---
 layout: main
 ---
-<article class="article-page">
-  <div class="page-content">
-    {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-        {% if page.fig-caption %}
-          <figcaption>{{page.fig-caption}}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
-    {% else %}
-    {% endif %}
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
-      {{content | markdownify}}
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
-        </div>
-        <div class="page-tag">
-          {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
-          {% endfor %}
+
+<div class="container-fluid container-header">
+
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-10">
+        <div class="post-header">
+
+          <span class="header-title"></span>
+
         </div>
       </div>
-      {% include disqus.html %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid header-posts">
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <article class="post-post">
+          <h1>{{page.title}}</h1>
+          <div class="post-details"> {{site.author}} - <span class="tag">
+             {% for tag in page.tags %}
+            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }}</a>
+          {% endfor %}
+           </span> - {% capture words %}{{ page.content | number_of_words }}{% endcapture %}{% unless words contains "-"
+            %}{{ words | plus: 250 | divided_by: 250 | append: " minuto(s) de lectura" }}{% endunless %}</div>
+          <div>
+            {{ content | markdownify}}
+          </div>
+
+          <div class="form push-down">
+            <form class="contact-form" action="enviar-formulario.php" method="post">
+              <div class="container">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="row">
+                      <div class="col-12">
+                        <p>Si quieres contactar conmigo puedes dejar tu comentario:</p>
+                        <textarea name="observaciones" rows="8" placeholder="Puedes escribir aquí..."></textarea>
+                      </div>
+                      <div class="col-6">
+                        <label>*Nombre:</label>
+                        <input maxlength="30" name="nombre" required size="30" type="text" placeholder="Escribe tu nombre" />
+                      </div>
+                      <div class="col-6">
+                        <label>*Email:</label>
+                        <input name="email" required type="email" placeholder="Correo electrónico" />
+                      </div>
+                      <div class="col"><input type="submit" value="ENVIAR" /></div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="container push-down push-up">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col-4">
+                <div class="col-12">
+                  <img class="round-image" src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" >
+                </div>
+                <div class="col-12">
+                  {{site.author}}
+                </div>
+                <div class="col-12">
+                  {{site.about-author}}
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
