@@ -21,7 +21,17 @@ body {
 /* Global Header */
 
 .container-header {
-    background-color: var(--electric-purple);
+
+
+    background-color: #D9298E;
+    background-image: -moz-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #D9298E), color-stop(100%, #22D8D0));
+    background-image: -webkit-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+
     margin-top: -1px;
 }
 
@@ -89,8 +99,17 @@ body {
 }
 
 .posts {
+
+    background-color: #D9298E;
+    background-image: -moz-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #D9298E), color-stop(100%, #22D8D0));
+    background-image: -webkit-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+
     padding-top: 8em;
-    background-color: var(--electric-purple);
     padding-bottom: 8em;
     margin-top: -1px;
 }
@@ -255,11 +274,20 @@ input[type="submit"], .leer-button {
     padding: 10px 20px;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: var(--electric-purple);
+
     border: solid 1px #ededed;
     min-width: 10em;
     font-weight: bold;
     width: fit-content;
+
+    background-color: #D9298E;
+    background-image: -moz-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #D9298E), color-stop(100%, #22D8D0));
+    background-image: -webkit-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
+    background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
 }
 
 input[type="submit"]:hover {
