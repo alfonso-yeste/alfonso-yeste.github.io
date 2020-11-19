@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<div class="overlay"></div>
 <div class="container-fluid container-header">
     <div class="container">
         <div class="row">
@@ -11,8 +11,8 @@ layout: default
                         <a class="navbar-brand" href="#">
                             <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt="" loading="lazy">
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        <button  id="sidebarCollapse" class="navbar-toggler" type="button" data-toggle="collapse"
+                                 aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -51,6 +51,48 @@ layout: default
     </div>
 </div>
 
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt="" loading="lazy">
+        </div>
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">CRO - UX RESEARCH<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ANALYTICS</a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ESTADÍSTICA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">JAVASCRIPT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">WPO</a>
+            </li>
+
+            <li class="nav-item">
+                <div id="search-input-mobile" style="display: none">
+                    <input class="form-control search-field" type="search" placeholder="Búsqueda"
+                           aria-label="Search">
+                </div>
+                <a class="nav-link" href="#" id="search-mobile"><i class="fas fa-search"></i></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
 {{ content }}
 
 <!-- Footer -->
@@ -74,4 +116,11 @@ layout: default
         crossorigin="anonymous"></script>
 <!-- JS Scripts End -->
 <script src="https://kit.fontawesome.com/a136b1a484.js" crossorigin="anonymous"></script>
+
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
 <script src="{{site.baseurl}}/assets/js/main.js"></script>
