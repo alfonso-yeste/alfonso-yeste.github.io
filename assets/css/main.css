@@ -56,7 +56,7 @@ body {
 
 .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .search-field {
@@ -526,5 +526,9 @@ a.article:hover {
 @media (min-width: 992px) {
     #sidebar {
         display: none;
+    }
+
+    .navbar-container {
+        justify-content: center;
     }
 }
