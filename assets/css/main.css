@@ -317,11 +317,6 @@ input[type="submit"]:hover {
 /*       ---------------       */
 
 
-
-/*
-    DEMO STYLE
-*/
-
 p {
     font-size: 1.1em;
     font-weight: 300;
@@ -365,7 +360,7 @@ a:focus {
     width: 250px;
     position: fixed;
     top: 0;
-    left: -250px;
+    right: -250px;
     height: 100vh;
     z-index: 999;
     color: #fff;
@@ -385,7 +380,7 @@ a:focus {
 }
 
 #sidebar.active {
-    left: 0;
+    right: 0;
 }
 
 #dismiss {
