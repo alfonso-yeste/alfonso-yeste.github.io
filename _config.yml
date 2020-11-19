@@ -1,7 +1,6 @@
-title: Hola, Soy Sergio Susa, Ingeniero de Sistemas y Computación entre otras cosas.
+title: Hola, Soy Alfonso Yeste, soy Analista Digital enfocado al UX y CRO.
 description: > # this means to ignore newlines until "baseurl:"
-  Bienvenidos a mi blog personal donde comparto mis experiencias y vivencias
-  y en general todo lo que creo que va a ser de interés general.
+  Bienvenidos a mi blog personal donde comparto el conocimiento que he adquirido trabajando y experimentando.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.alfonsoyeste.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -11,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Alfonso Yeste
 author-logo: sergiosusa_logo.jpg
 author-img: sergio-susa.jpg # add your photo
-about-author: 💻 Ingeniero de Sistemas y Computación • 👨‍🏫 Profesor • 📻 Podcaster • ✍🏼Intento de escritor • 👶🏼Padre • 💸Accionista en @HolaLuzcom • 🤘Metalero • 🎮Vídeo jugador.
+about-author: 💻 UX & CRO • 👨‍🏫 Profesor • 📻 Podcaster • ✍🏼Intento de escritor 
 social-twitter: sergiosusa # add your Twitter handle
 social-facebook: sergiosusa # add your Facebook handle
 social-github: sergiosusa # add your Github handle
