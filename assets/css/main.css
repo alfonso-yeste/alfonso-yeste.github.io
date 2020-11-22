@@ -68,14 +68,15 @@ body {
 /* Header Title */
 
 .header {
-    margin-top: 14em;
+    margin-top: 10em;
     text-align: center;
 }
 
 .header .title {
-    font-size: 8em;
+    font-size: 9em;
     color: var(--white);
     font-family: Montserrat, serif;
+    font-weight: bold;
 }
 
 @media (max-width: 777px) {
@@ -181,10 +182,13 @@ body {
     position: relative;
     background: var(--white);
     min-height: 300px;
-    text-align: center;
     padding: 4em 1em 1em 1em;
     color: var(--nighr-rider);
     margin-bottom: 6em;
+}
+
+.post-post-title {
+    text-align: center;
 }
 
 .post-details {
