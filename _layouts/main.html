@@ -6,16 +6,14 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-sm">
+
                 <div class="navbar-container">
+                    <a class="brand" href="#">
+                        <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30"
+                        height="30" alt="" loading="lazy">
+                    </a>
                     <nav class="navbar navbar-expand-lg navbar-dark">
-                        <a class="navbar-brand" href="#">
-                            <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt="" loading="lazy">
-                        </a>
-                        <button  id="sidebarCollapse" class="navbar-toggler" type="button" data-toggle="collapse"
-                                 aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
@@ -35,16 +33,22 @@ layout: default
                                     <a class="nav-link" href="#">WPO</a>
                                 </li>
                             </ul>
-                            
+
                         </div>
+                        <button id="sidebarCollapse" class="navbar-toggler" type="button" data-toggle="collapse"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </nav>
 
-                    <div id="search-input" style="display: none">
-                        <input class="form-control search-field" type="search" placeholder="Búsqueda"
-                               aria-label="Search">
+                    <div id="search-content">
+                        <div id="search-input" style="display: none">
+                            <input class="form-control search-field" type="search" placeholder="Búsqueda"
+                                   aria-label="Search">
+                        </div>
+                        <a class="nav-link" href="#" id="search"><i class="fas fa-search"></i></a>
                     </div>
-                    <a class="nav-link" href="#" id="search"><i class="fas fa-search"></i></a>
-
                 </div>
             </div>
         </div>
@@ -60,10 +64,11 @@ layout: default
         </div>
 
         <div class="sidebar-header">
-            <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt="" loading="lazy">
+            <img src="{{ "/assets/img/" | prepend: site.baseurl | append : "logo.png"}}" width="30" height="30" alt=""
+            loading="lazy">
         </div>
 
-        <ul class="navbar-nav mr-auto">
+        <ul id="nav-mobile" class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">CRO - UX RESEARCH<span class="sr-only">(current)</span></a>
             </li>
@@ -82,6 +87,24 @@ layout: default
             </li>
 
         </ul>
+
+        <div id="nav-author" class="container push-down push-up">
+            <div class="row">
+                <div class="col">
+                    <div class="col-12">
+                        <img class="round-image"
+                             src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}">
+                    </div>
+                    <div class="col-12">
+                        {{site.author}}
+                    </div>
+                    <div class="col-12">
+                        {{site.about-author}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </nav>
 
 </div>
@@ -111,7 +134,9 @@ layout: default
 <script src="https://kit.fontawesome.com/a136b1a484.js" crossorigin="anonymous"></script>
 
 <!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
 
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>

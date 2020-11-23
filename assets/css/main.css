@@ -30,7 +30,7 @@ body {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 
     margin-top: -1px;
 }
@@ -108,7 +108,7 @@ body {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 
     padding-top: 8em;
     padding-bottom: 8em;
@@ -119,6 +119,7 @@ body {
     text-align: center;
     color: var(--white);
 }
+
 /* Post Title End */
 
 /* Post Card */
@@ -143,6 +144,7 @@ body {
 .post a {
     color: var(--anakiwa);
 }
+
 /* Post Card End */
 
 /* Footer */
@@ -156,9 +158,8 @@ body {
 .footer-content {
     text-align: center;
 }
+
 /* Footer End */
-
-
 
 
 /* post */
@@ -291,7 +292,7 @@ input[type="submit"], .leer-button {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 }
 
 input[type="submit"]:hover {
@@ -379,7 +380,7 @@ a:focus {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 
 }
 
@@ -416,6 +417,7 @@ a:focus {
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
+
 .overlay.active {
     display: block;
     opacity: 1;
@@ -430,7 +432,7 @@ a:focus {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 }
 
 #sidebar ul.components {
@@ -453,7 +455,7 @@ a:focus {
     background: #fff;
 }
 
-#sidebar ul li.active>a,
+#sidebar ul li.active > a,
 a[aria-expanded="true"] {
     color: #fff;
     background-color: #D9298E;
@@ -463,7 +465,7 @@ a[aria-expanded="true"] {
     background-image: -o-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: -ms-linear-gradient(left, #D9298E 0%, #22D8D0 100%);
     background: linear-gradient(to right, #D9298E 0%, #22D8D0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
 
 }
 
@@ -524,10 +526,40 @@ a.article:hover {
 
 @media (min-width: 992px) {
     #sidebar {
-        display: none;
+        display: block;
     }
 
     .navbar-container {
-        justify-content: center;
+        justify-content: space-between;
     }
+
+    #nav-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    #nav-author {
+        display: none;
+    }
+
+}
+
+.brand {
+    padding-top: 23px;
+}
+
+@media (min-width: 100px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+    }
+}
+
+#search-content {
+    padding-top: 15px;
+}
+
+.arrow-down {
+    font-size: 5em;
+    height: 0px;
 }
