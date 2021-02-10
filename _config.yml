@@ -9,7 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Alfonso Yeste
 author-logo: sergiosusa_logo.jpg
-author-img: sergio-susa.jpg # add your photo
+author-img: alfonso-yeste.jpg # add your photo
 about-author: 💻 UX & CRO • 👨‍🏫 Profesor • 📻 Podcaster • ✍🏼Intento de escritor 
 social-twitter: 
 social-facebook: 
@@ -31,3 +31,5 @@ paginate: 8
 paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+livereload: true
