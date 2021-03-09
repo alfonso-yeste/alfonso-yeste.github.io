@@ -547,6 +547,7 @@ a.article:hover {
 
 .brand {
     padding-top: 23px;
+    display: none;
 }
 
 @media (min-width: 100px) {
