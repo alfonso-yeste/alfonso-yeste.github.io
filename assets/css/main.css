@@ -556,7 +556,7 @@ a.article:hover {
 }
 
 .nav-link {
-    color: white;
+    color: white !important;
 }
     
 
