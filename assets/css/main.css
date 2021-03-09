@@ -555,6 +555,11 @@ a.article:hover {
     }
 }
 
+.nav-link {
+    color: white;
+}
+    
+
 #search-content {
     padding-top: 15px;
 }
